@@ -9,7 +9,7 @@ function App() {
   const generateStory = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:3001/generate-story", {
+      const response = await fetch("https://ai-powered-story-generator.onrender.com/generate-story", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -24,6 +24,7 @@ function App() {
     }
     setLoading(false);
   };
+  
 
   return (
     <div className="story-generator">
