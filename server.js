@@ -10,6 +10,7 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = 3001;
 
+import process from "process";
 const apiKey = process.env.GEMINI_API_KEY || "AIzaSyBoNi4cnjN6Gf8JhOmPpegd2a_25xQckiE";
 const genAI = new GoogleGenerativeAI(apiKey);
 
@@ -37,5 +38,5 @@ app.post("/generate-story", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on https://ai-powered-story-generator.vercel.app/`);
 });
